@@ -17,3 +17,16 @@
     height: 44px;
 }
 
+.bg-main-prof{
+    background: linear-gradient(rgba(1, 61, 15, 0.356), rgba(33, 236, 84, 0.356));
+}
+
+.card-cursos-prof{
+    background: linear-gradient(rgba(0, 0, 0, 0.356), rgba(0, 0, 0, 0.767));
+    color: #f0ba0a;
+    width: 18rem;
+}
+
+.card-cursos-prof img{
+    height: 300px;
+}
