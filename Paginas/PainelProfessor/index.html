@@ -6,13 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gen Conection</title>
 
+    <!-- Link Css externo global -->
+    <link rel="stylesheet" href="../../Css/styleGlobal.css">
+
     <!-- CSS Bootstrap CDN v-5.2 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
 <body>
-    <h1>Painel dos Professores</h1>
+    <section>
+
+        <!-- Inicio Menu Nav -->
+        <header class="container-fluid menu-nav">
+            <nav class="navbar navbar-expand-lg" >
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img class="img-logo" src="../../Images/1.png" alt="Imagem Logotipo">
+                        <h1 class="text-light h4">Gen Connection</h1>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                        <ul class="navbar-nav fw-bolder">
+                            <li class="nav-item">
+                                <a class="nav-link text-light" aria-current="page" href="#">Meus Cursos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">Meus Alunos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">Enviar Notificação</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Gerenciador de tarefas
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item text-primary" href="#">Reposição de aula</a></li>
+                                    <li><a class="dropdown-item text-primary" href="#">Material Didatico</a></li>
+                                    <li><a class="dropdown-item text-primary" href="#">Agenda</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+         <!-- Fim Menu Nav -->
+
+         <main>
+            <h1 class="h4">Professor</h1>
+         </main>
+
+    </section>
+
 
     <!-- JS Bootstrap CDN v-5.2 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
