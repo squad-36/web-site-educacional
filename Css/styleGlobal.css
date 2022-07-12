@@ -30,3 +30,7 @@
 .card-cursos-prof img{
     height: 300px;
 }
+
+.bg-footer{
+    background: linear-gradient(#2574a8, #2574a8);
+}
