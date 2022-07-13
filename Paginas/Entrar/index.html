@@ -12,12 +12,15 @@
     <!--LINK CDN REMIX ICON-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="../../Css/styleGlobal.css">
+     <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"> 			
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+   <link rel="stylesheet" href="../../Css/login.css">	
 </head>
 
 <body>
-
-    <!--INICIO DO MENU NAV-->
-    <section>
+    <main class="bg-main-login">
+        <!-- Inicio Menu Nav -->
         <header class="container-fluid menu-nav">
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
@@ -33,98 +36,47 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                         <ul class="navbar-nav fw-bolder">
                             <li class="nav-item">
-                                <a class="nav-link text-light" aria-current="page" href="#">Meus Cursos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">Meus Alunos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">Enviar Notificação</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdownMenuLink"
-                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Gerenciador de tarefas
+                                <a class="nav-link text-light" aria-current="page" href="../Escrever-se/index.html">
+                                    <i class="ri-login-box-line border p-2 rounded-circle"></i>
+                                    Primeiro Acesso
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item text-primary" href="#">Reposição de aula</a></li>
-                                    <li><a class="dropdown-item text-primary" href="#">Material Didatico</a></li>
-                                    <li><a class="dropdown-item text-primary" href="#">Agenda</a></li>
-                                </ul>
                             </li>
-                        </ul>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">
+                                    <i class="ri-discuss-line border p-2 rounded-circle"></i>
+                                    Sobre nós
+                                </a>
+                            </li>
                     </div>
                 </div>
             </nav>
 
         </header>
-        <!--FIM DO MENU NAV-->
+        <!-- Fim Menu Nav -->
 
-        <!--Container dos cards-->
-        <div class="row row-cols-1 row-cols-md-2 g-4 mt-3" style="width:100%; height:400px; background-color:#2574a8 ">
-            <div class="col">
-                <div class="card" style="height: 360px ;">
-                    <div class="card-body">
-                        <img src="../../Images/Login icon.png" alt="">
-
-
-                        <form>
-
-                            <!-- Usuário input -->
-                            <div class="form-outline mb-4 mt-3">
-                                <label class="form-label" for="form1Example1"><b>Usuário:</b></label>
-                                <input type="text" id="Usuário" class="form-control" />
-                            </div>
-
-                            <!-- Senha input -->
-                            <div class="form-outline mb-4">
-                                <label class="form-label" for="form1Example2"><b>Senha:</b></label>
-                                <input type="password" id="form1Example2" class="form-control" />
-                            </div>
-
-                            <!-- Segunda Coluna Alinhada -->
-                            <div class="row mb-4">
-                                <div class="col d-flex justify-content-center">
-
-                                    <!-- Checkbox -->
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="Lembrar-se de mim"
-                                            checked />
-                                        <label class="form-check-label" for="form1Example3"><b>Lembrar-se de
-                                                mim</b></label>
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                    <!-- link simples -->
-                                    <a href="#!"><b>Esqueceu sua senha?</b></a>
-                                </div>
-                            </div>
-
-                            <!-- Botão de Entrar -->
-                            <div class="d-grid gap-2 col-12 mx-auto">
-                                <button class="btn btn-primary" type="button"><b>Entrar</b></button>
-                            </div>
-                        </form>
+        <!--Container do formulário de login-->
+        <form>
+            <div class="wrapper bg-white">
+               <h4> <img class="img-login" style="height:50px; width: 100px;" src="../../Images/logo.png" alt=""> Gen Connection</h4>
+                
+                <form class="pt-3">
+                    <div class="form-group py-2">
+                        <div class="input-field"> <span class="far fa-user p-2"></span> <input type="text" placeholder="Usuário" required class=""> </div>
                     </div>
-                </div>
+                    <div class="form-group py-1 pb-2">
+                        <div class="input-field"> <span class="fas fa-lock p-2"></span> <input type="text" placeholder="Senha" required class=""> <button class="btn bg-white text-muted"> <span class="far fa-eye-slash"></span> </button> </div>
+                    </div>
+                    <div class="d-flex align-items-start">
+                        <div class="remember"> <label class="option"><b>Lembrar-se de mim</b> <input type="radio" name="radio"> <span class="checkmark"></span> </label> </div>
+                        <div class="ml-auto"> <a href="#" id="forgot">Esqueceu sua senha?</a> </div>
+                    </div> <button class="btn btn-block text-center my-3">Entrar</button>
+                    <div class="text-center pt-3 text-muted"><B>Não possui cadastro?</B> <a href="../Escrever-se/index.html">Cadastrar</a></div>
+                </form>
             </div>
 
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">DESCRIÇÃO</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-            </div>
-            <!--FIM DO FORMULÁRIO DE LOGIN-->
 
-        </div>
-
-        </main>
-    </section>
+    </main>
 
 
     <!-- JS Bootstrap CDN v-5.2 -->
