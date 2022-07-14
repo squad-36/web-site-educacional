@@ -7,7 +7,10 @@
     <title>Gen Conection</title>
 
     <!-- Link Css externo global -->
-    <link rel="stylesheet" href="../../Css/styleGlobal.css">
+    <link rel="stylesheet" href="Css/styleGlobal.css">
+
+    <!--Link CDN Biblioteca Remix icon-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <!-- CSS Bootstrap CDN v-5.2 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -46,24 +49,80 @@
     .sobre {
         color: white;
         text-align: center;
-        font-size: 25px;
+        font-size: 27px;
         padding-top: 40px;
         padding-left: 70px;
         padding-right: 70px;
         margin-left: auto;
         margin-right: auto;
         /*width: 50em;*/
-
     }
 
     .style {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 100%;
         background-color: #2574a8;
         width: auto;
-        height: 250px
+    }
+
+    /*Cards - Recursos */
+
+    .card {
+        margin: 25px;
+        border: none;
+    }
+
+    .card-body a {
+        text-decoration: none;
+        color: rgba(11, 28, 95, 0.866);
+    }
+
+    .row {
+        text-align: center;
+        align-items: center;
+        padding-top: 20px;
+        justify-content: space-around;
+    }
+
+    .list-group {
+
+        font-size: 17px;
+        padding-top: 20px;
+    }
+
+    .list-group-item {
+        background-color: rgba(11, 28, 95, 0.638);
+        color: white;
+    }
+
+    .viagens {
+        display: grid;
+        grid-template-rows: auto;
+    }
+
+    .card-text {
+        font-size: 20px;
+        background-color: #ed4d37;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .recursos {
+        text-align: center;
+        padding-top: 8%;
+        color: #ed4d37;
+    }
+
+    /*Footer*/
+
+    .bg-footer {
+        background: linear-gradient(#2574a8, #2574a8);
     }
 </style>
 
 <!--Fim CSS - Início HTML-->
+
 <body>
     <section>
         <!-- Inicio Menu Nav -->
@@ -71,7 +130,7 @@
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
                     <a class="navbar-brand" href="#">
-                        <img class="img-logo" src="img/1.png" alt="Imagem Logotipo">
+                        <img class="img-logo" src="Images/logo.png" alt="Imagem Logotipo">
                         <h1 class="text-light h4">Gen Connection</h1>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -92,27 +151,183 @@
                 </div>
             </nav>
         </header>
-        
-        <!--Banner-->
+    </section>
+
+        <!--Início Banner-->
         <container>
             <img class="img-banner" src="img/educ2.png">
         </container>
-        </main>
-    </section>
+    
 
-    <!--Inicício descrição-->
-    <container class="container my-4">
+    <!--Inicío Descrição-->
+    <div class="style">
+        <p class="sobre">Gen Connect é um site voltado para alunos, pais e professores. Foi desenvolvido
+            para fornecer materiais didáticos e atividades através da gameficação,
+            fornecendo acompanhando para os pais, diminuindo a sobrecarga dos professores
+            e diversificando o material de aula.
+        </p>
+    </div>
+
+    <!--Início Cards - Recursos-->
+    <h2 class="recursos">Nossos Recursos</h2>
+
+    <main>
         <div class="row">
-            <div class="col-12">
-                <div class="style">
-                    <p class="sobre">Gen Connect é um site voltado para alunos, pais e professores. Foi desenvolvido
-                        para fornecer materiais didáticos e atividades através da gameficação,
-                        fornecendo acompanhando para os pais, diminuindo a sobrecarga dos professores
-                        e diversificando o material de aula.
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card">
+                    <img src="img/ed2.png" class="card-img-top" alt="..." width="350px">
+                    <div class="card-body">
+                        <a href="#">
+                            <p class="card-text">Material Didático</p>
+                        </a>
+                        <div class="list-group">
+                            <p>Recurso pedagógico com aprendizagem prática. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card">
+                    <img src="img/ed4.png" class="card-img-top" alt="..." width="350px">
+                    <div class="card-body">
+                        <a href="#">
+                            <p class="card-text">Controle de Tarefas</p>
+                        </a>
+                        <div class="list-group">
+                            <p>Alerta de atividades próximas e cronograma das aulas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card">
+                    <img src="img/ed5.png" class="card-img-top" alt="..." width="350px">
+                    <div class="card-body">
+                        <a href="#">
+                            <p class="card-text">Recompensa por Gameficação</p>
+                        </a>
+                        <div class="list-group">
+                            <p>Sistema de recompensas e ranking de desempenho.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card">
+                        <img src="img/ed3.png" class="card-img-top" alt="..." width="350px">
+                        <div class="card-body">
+                            <a href="#">
+                                <p class="card-text">Cursos</p>
+                            </a>
+                            <p class="card-text"></p>
+                            <div class="list-group">
+                                <p>Cursos atualizados para professores e alunos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card">
+                        <img src="img/ed6.jpg" class="card-img-top" alt="..." width="350px">
+                        <div class="card-body">
+                            <a href="#">
+                                <p class="card-text">Atividades Online</p>
+                            </a>
+                            <div class="list-group">
+                                <p>Projetos individuais e atividades complementares.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card">
+                        <img src="img/ed7.jpg" class="card-img-top" alt="..." width="350px">
+                        <div class="card-body">
+                            <a href="#">
+                                <p class="card-text">Acompanhamento dos Pais
+                                </p>
+                            </a>
+                            <div class="list-group">
+                                <p>Acesso a notas, faltas e desempenho.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <!--Fim Cards-->
+
+    <!--Inicio footer-->
+    <footer class="container-fluid bg-footer">
+        <div class="container py-4 text-light">
+
+            <div class="row p-2">
+                <div class="col">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Biblioteca Online"
+                            aria-label="Search">
+                        <button class="btn btn-outline-dark fw-bolder" type="submit">Pesquisar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <a href="#" class="nav-link">
+                        <h5>Inclusão tecnológica</h5>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <h5>Orientação de Carreira</h5>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <h5>Metodologias de ensino</h5>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <h5>Receba novidades</h5>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#" class="nav-link">
+                        <h5>Preciso de ajuda!</h5>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <h5>Escolas Parceiras</h5>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <h5>Seja Voluntario</h5>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <h5>Contato</h5>
+                    </a>
+
+                </div>
+                <div class="col text-center">
+                    <h5 class="text-start">Redes Sociais</h5>
+
+                    <i class="ri-facebook-fill border p-2 rounded-circle"></i>
+                    <i class="ri-linkedin-fill border p-2 rounded-circle"></i>
+                    <i class="ri-instagram-fill border p-2 rounded-circle"></i>
+                    <i class="ri-twitter-fill border p-2 rounded-circle"></i>
+
+                    <hr style="height: 6px; border: 2px solid #ffffff; background-color: #ffffff;">
+                    <p class="text-start"><i class="ri-copyright-line"></i>Gen Connection, direitos reservados
                     </p>
                 </div>
             </div>
-    </container>
+        </div>
+    </footer>
+    <!--Fim footer-->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
