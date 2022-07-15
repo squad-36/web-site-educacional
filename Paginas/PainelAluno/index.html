@@ -13,13 +13,11 @@
 
     <!-- CSS Bootstrap CDN v-5.2 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    
 </head>
 <style>
-    .class img-thumbnail {
-        height: 30px;
-        width: 30px;
-    }
+   
 </style>
 
 <body>
@@ -41,7 +39,36 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                         <ul class="navbar-nav fw-bolder">
-
+                            <li class="nav-item">
+                                <a class="nav-link text-light" aria-current="page" href="./index.html">
+                                    <i class="ri-rocket-line border p-2 rounded-circle"></i>
+                                    Página inicial de Alunos
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="./meusAlunos.html">
+                                    <i class="ri-hand-heart-line border p-2 rounded-circle"></i>
+                                    Cursos
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="meusCursos.html">
+                                    <i class="ri-award-line border p-2 rounded-circle"></i>
+                                    Premiações
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="ri-file-history-line border p-2 rounded-circle"></i>
+                                    Gerenciador de tarefas
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item text-primary" href="#">Reposição de aula</a></li>
+                                    <li><a class="dropdown-item text-primary" href="#">Material Didatico</a></li>
+                                    <li><a class="dropdown-item text-primary" href="#">Agenda</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
