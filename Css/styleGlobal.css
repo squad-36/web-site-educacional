@@ -43,4 +43,19 @@
     background: linear-gradient(#2574a8, #2574a8);
 }
 
+.pais2 {
+    text-align: center; 
+    text-decoration: none; 
+    color: black;
+    
+}  
+
+.at{
+    text-align: center;
+} 
+
+.ola{
+    text-align: center;
+}
+
 /*Ajustei códigos globais do style.css
