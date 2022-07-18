@@ -12,10 +12,10 @@
     <!--LINK CDN REMIX ICON-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="../../Css/styleGlobal.css">
-     <!-- Bootstrap CSS -->
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"> 			
-   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-   <link rel="stylesheet" href="../../Css/login.css">	
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" href="../../Css/login.css">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
                     <a class="navbar-brand" href="#">
-                        <img class="img-logo" src="../../Images/logo.png" alt="Imagem Logotipo">
+                        <img class="img-logo" src="../../Images/imgProfessor/logo.png" alt="Imagem Logotipo">
                         <h1 class="text-light h4">Gen Connection</h1>
                     </a>
                     <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse"
@@ -56,26 +56,48 @@
         <!-- Fim Menu Nav -->
 
         <!--Container do formulário de login-->
-            <div class="wrapper bg-white">
-               <h4> <img class="img-login" style="height:50px; width: 100px;" src="../../Images/logo.png" alt=""> Gen Connection</h4>
-                
-                <form class="pt-3">
-                    <div class="form-group py-2">
-                        <div class="input-field"> <span class="far fa-user p-2"></span> <input type="text" placeholder="Usuário" required class=""> </div>
-                    </div>
-                    <div class="form-group py-1 pb-2">
-                        <div class="input-field"> <span class="fas fa-lock p-2"></span> <input type="text" placeholder="Senha" required class=""> <button class="btn bg-white text-muted"> <span class="far fa-eye-slash"></span> </button> </div>
-                    </div>
-                    <div class="d-flex align-items-start">
-                        <div class="remember"> <label class="option"><b>Lembrar-se de mim</b> <input type="radio" name="radio"> <span class="checkmark"></span> </label> </div>
-                        <div class="ml-auto"> <a href="#" id="forgot">Esqueceu sua senha?</a> </div>
-                    </div> <button class="btn btn-block text-center my-3">Entrar</button>
-                    <div class="text-center pt-3 text-muted"><B>Não possui cadastro?</B> <a href="../Escrever-se/index.html">Cadastrar</a></div>
-                </form>
-            </div>
+        <div class="wrapper bg-white">
+            <h4> <img class="img-login" style="height:50px; width: 100px;" src="../../Images/imgProfessor/logo.png"
+                    alt=""> Gen Connection</h4>
+
+            <form class="pt-3">
+                <!--Identificação-->
+                <div class="Select input-group mb-1 mt-2">
+                    <label class="input-group-text bg-primary text-light" for="ID"><b>Selecione sua ID</b></label>
+                    <select id="opcao" class="form-select" id="IDS">
+                        <option selected>Ver opções</option>
+                        <option  value="1">Aluno</option>
+                        <option  value="2">Professor</option>
+                        <option  value="3">Responsável (Pais)</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group py-2">
+                    <div class="input-field"> <span class="far fa-user p-2"></span> <input type="text"
+                            placeholder="Usuário"  class=""> </div>
+                </div>
+                <div class="form-group py-1 pb-2">
+                    <div class="input-field"> <span class="fas fa-lock p-2"></span> <input type="text"
+                            placeholder="Senha" class=""> <button class="btn bg-white text-muted"> <span
+                                class="far fa-eye-slash"></span> </button> </div>
+                </div>
+                <div class="d-flex align-items-start">
+                    <div class="remember"> <label class="option"><b>Lembrar-se de mim</b> <input type="radio"
+                                name="radio"> <span class="checkmark"></span> </label> </div>
+                    <div class="ml-auto"> <a href="#" id="forgot">Esqueceu sua senha?</a> </div>
+                </div>
+
+                <button id="entrar" class="btn btn-block text-center my-3">Entrar</button>
+
+                <div class="text-center pt-3 text-muted"><B>Não possui cadastro?</B> <a
+                        href="../Escrever-se/index.html">Cadastrar</a></div>
+            </form>
+        </div>
 
     </main>
 
+    <script src="index.js"></script>
 
     <!-- JS Bootstrap CDN v-5.2 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
