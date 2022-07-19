@@ -193,8 +193,11 @@
     text-transform: uppercase;
 }
 
-
 .footer {
     width: 100%;
     height: 200px;
+}
+
+.bg-aluno-opcao{
+    background-color: #cfe0f0d8;
 }

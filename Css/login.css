@@ -7,6 +7,12 @@
     box-shadow: 20px 20px 80px rgb(206, 206, 206)
 }
 
+.bg-main-login{
+    background-size: cover;
+    height: 100vh ;
+    background-image:url(../Images/imgProfessor/main-fundo.jpeg);
+}
+
 .img-login{
     display: flex;
     justify-content: center;
@@ -22,7 +28,6 @@
     border: 1px solid #400485;
     color: #400485
 }
-
 
 .input-field {
     border-radius: 5px;

@@ -1,11 +1,5 @@
 
-    .img-banner {
-        opacity: 0.6;
-        max-width: 1521px;
-        width: 100%;
-        height: auto;
-    }
-
+    
     /*Sobre nós*/
 
     .sobre {
@@ -17,7 +11,22 @@
         /*width: 50em;*/
     }
 
+    .container-banner{
+        position: relative;
+    }
+
+    .img-banner {
+        opacity: 0.6;
+        max-width: 1521px;
+        width: 100%;
+        height: auto;
+    }
+
     .style {
+        position: absolute;
+        bottom: 10px;
+        left: 106px;
+        opacity: 0.9;
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: 100%;
