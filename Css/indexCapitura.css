@@ -34,6 +34,10 @@
         width: auto;
     }
 
+    .bg-capitura{
+        background-color: #cfe0f0d8;
+    }
+
     /*Cards - Recursos */
 
     .card {
