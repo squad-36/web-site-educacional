@@ -160,7 +160,7 @@ public class AtividadesDAO {
 	}
 
 	public Atividades getAtividadesById(int id) {
-		String sql = "SELECT * FROM atividades WHERE id_destino = ?;";
+		String sql = "SELECT * FROM atividades WHERE id_atividades = ?;";
 
 		Atividades atividades = new Atividades();
 

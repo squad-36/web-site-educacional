@@ -69,7 +69,7 @@ public class PermissaoServlet extends HttpServlet {
 	// Create
 		protected void create(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			
-			permissao.setnome_permissao(request.getParameter("nome_permissao"));
+			permissao.setnome_permissao(request.getParameter("nome"));
 			PermissaoDao.save(permissao);
 			response.sendRedirect("permissao");
 		
@@ -90,7 +90,7 @@ public class PermissaoServlet extends HttpServlet {
 		// Update
 		protected void update(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { 
 			
-			permissao.setnome_permissao(request.getParameter("nome_permissao"));
+			permissao.setnome_permissao(request.getParameter("nome"));
 			permissao.setId_permissao(Integer.parseInt(request.getParameter("id")));
 			PermissaoDao.update(permissao);
 			response.sendRedirect("permissao");

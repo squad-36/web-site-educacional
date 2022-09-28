@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Atualizar usuario</title>
+<title>Atualizar Usuario</title>
 
 <!-- CDN CSS Bootstrap v-5.1 -->
 <link
@@ -28,7 +28,7 @@
 		</header>
 		
 		<div class="container py-3">
-			<form action="../../cadastrar-usuario">
+			<form action="./atualizar-usuario">
 				
 				<div class="form-group mb-3">
 					<label for="nome" class="form-label"> Nome </label> <input
@@ -56,7 +56,7 @@
 
 				<button type="submit" class="btn btn-primary">Enviar</button>
 				
-				<a href="../../usuario" class="btn btn-danger"
+				<a href="./usuario" class="btn btn-danger"
 					style="margin-left: 10px"> Cancelar </a>
 			</form>
 		</div>

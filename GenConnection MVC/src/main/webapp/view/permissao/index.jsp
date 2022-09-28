@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" import="model.Atividades" import="java.util.List"%>
+	pageEncoding="UTF-8" import="model.Permissao" import="java.util.List"%>
 
 <%
 @SuppressWarnings("unchecked")
-List<Atividades> lista = (List<Atividades>) request.getAttribute("atividades");
+List<Permissao> lista = (List<Permissao>) request.getAttribute("permissao");
 %>
 
 
@@ -11,7 +11,7 @@ List<Atividades> lista = (List<Atividades>) request.getAttribute("atividades");
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Atividades</title>
+<title>Permissao</title>
 
 <link rel="stylesheet" href="./css/style.css">
 
@@ -32,7 +32,7 @@ List<Atividades> lista = (List<Atividades>) request.getAttribute("atividades");
 			<nav class="navbar-nav navbar-dark">
 				<div class="row">
 					<div class="col">
-						<h1 class="navbar-brand title-logo">Atividades</h1>
+						<h1 class="navbar-brand title-logo">Permissoes</h1>
 					</div>
 				</div>
 				<div class="row">
@@ -42,7 +42,7 @@ List<Atividades> lista = (List<Atividades>) request.getAttribute("atividades");
 							<li class="list-group-item"><a class="link"
 								href="./index.html">Home</a></li>
 							<li class="list-group-item"><a class="link"
-								href="./permissoes">Permissoes</a></li>
+								href="./permissao">Permissoes</a></li>
 							<li class="list-group-item"><a class="link" href="./usuario">Usuarios</a>
 							</li>
 							<li class="list-group-item"><a class="link"
@@ -50,7 +50,7 @@ List<Atividades> lista = (List<Atividades>) request.getAttribute("atividades");
 							<li class="list-group-item"><a class="link" href="./jogos">Jogos</a>
 							</li>
 							<li class="list-group-item"><a class="link"
-								href="./notificacoes">Notificacoes</a></li>
+								href="./notificacao">Notificacoes</a></li>
 						</ul>
 					</div>
 				</div>
@@ -60,14 +60,14 @@ List<Atividades> lista = (List<Atividades>) request.getAttribute("atividades");
 	<!-- final Menu Nav -->
 
 	<header class="container-fluid bg-danger p-2">
-		<h1 class="h3">Atividades</h1>
+		<h1 class="h3">Permissoes</h1>
 	</header>
 
 	<header class="container my-4">
 		<div class="row">
 			<div class="col">
-				<a class="btn btn-info" href="./view/atividades/cadastrar.html">Cadastrar
-					Atividades</a>
+				<a class="btn btn-info" href="./view/permissao/cadastrar.html">Cadastrar
+					Permissao</a>
 
 			</div>
 
@@ -81,8 +81,8 @@ List<Atividades> lista = (List<Atividades>) request.getAttribute("atividades");
 	<table class="table container">
 		<thead class="thead-dark">
 			<tr>
-				<th scope="col">ID da Atividade</th>
-				<th scope="col">Nome da Matéria</th>
+				<th scope="col">ID da Permissao</th>
+				<th scope="col">Nome da Permissao</th>
 
 			</tr>
 		</thead>
@@ -90,20 +90,20 @@ List<Atividades> lista = (List<Atividades>) request.getAttribute("atividades");
 
 
 			
-			<% for (Atividades a : lista) { %>
+			<% for (Permissao p : lista) { %>
 			
 
 			<tr>
 
 
-				<td><%=a.getId_atividades()%></td>
-				<td><%=a.getMaterias()%></td>
+				<td><%=p.getId_permissao()%></td>
+				<td><%=p.getnome_permissao()%></td>
 
 				<td><a class="btn btn-success"
-					href="editar-atividades?id=<%=a.getId_atividades()%>">Atualizar
-						Atividades</a> <a class="btn btn-danger"
-					href="deletar-atividades?id=<%=a.getId_atividades()%>">Deletar
-						Atividades</a></td>
+					href="editar-permissao?id=<%=p.getId_permissao()%>">Atualizar
+						Permissao</a> <a class="btn btn-danger"
+					href="deletar-permissao?id=<%=p.getId_permissao()%>">Deletar
+						Permissao</a></td>
 						
 			<% }; %>
 				

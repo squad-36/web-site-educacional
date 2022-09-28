@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" import="model.Notificacao" import="java.util.List"%>
+	pageEncoding="UTF-8" import="model.Jogos" import="java.util.List"%>
 
 <%
 @SuppressWarnings("unchecked")
-List<Notificacao> lista = (List<Notificacao>) request.getAttribute("notificacao");
+List<Jogos> lista = (List<Jogos>) request.getAttribute("jogos");
 %>
 
 
@@ -11,7 +11,7 @@ List<Notificacao> lista = (List<Notificacao>) request.getAttribute("notificacao"
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Notificacao</title>
+<title>Jogos</title>
 
 <link rel="stylesheet" href="./css/style.css">
 
@@ -32,7 +32,7 @@ List<Notificacao> lista = (List<Notificacao>) request.getAttribute("notificacao"
 			<nav class="navbar-nav navbar-dark">
 				<div class="row">
 					<div class="col">
-						<h1 class="navbar-brand title-logo">Notificacoes</h1>
+						<h1 class="navbar-brand title-logo">Jogos</h1>
 					</div>
 				</div>
 				<div class="row">
@@ -42,7 +42,7 @@ List<Notificacao> lista = (List<Notificacao>) request.getAttribute("notificacao"
 							<li class="list-group-item"><a class="link"
 								href="./index.html">Home</a></li>
 							<li class="list-group-item"><a class="link"
-								href="./permissoes">Permissoes</a></li>
+								href="./permissao">Permissoes</a></li>
 							<li class="list-group-item"><a class="link" href="./usuario">Usuarios</a>
 							</li>
 							<li class="list-group-item"><a class="link"
@@ -60,14 +60,14 @@ List<Notificacao> lista = (List<Notificacao>) request.getAttribute("notificacao"
 	<!-- final Menu Nav -->
 
 	<header class="container-fluid bg-danger p-2">
-		<h1 class="h3">Notificacoes</h1>
+		<h1 class="h3">Jogos</h1>
 	</header>
 
 	<header class="container my-4">
 		<div class="row">
 			<div class="col">
-				<a class="btn btn-info" href="./view/notificacao/cadastrar.html">Cadastrar
-					Notificacoes</a>
+				<a class="btn btn-info" href="./view/jogos/cadastrar.html">Cadastrar
+					Jogos</a>
 
 			</div>
 
@@ -81,9 +81,9 @@ List<Notificacao> lista = (List<Notificacao>) request.getAttribute("notificacao"
 	<table class="table container">
 		<thead class="thead-dark">
 			<tr>
-				<th scope="col">ID da Notificacao</th>
-				<th scope="col">Nome da Notificacao</th>
-				<th scope="col">Mensagem</th>
+				<th scope="col">ID do Jogo</th>
+				<th scope="col">Nome do Jogo</th>
+				<th scope="col">Pontos</th>
 
 			</tr>
 		</thead>
@@ -91,21 +91,21 @@ List<Notificacao> lista = (List<Notificacao>) request.getAttribute("notificacao"
 
 
 			
-			<% for (Notificacao n : lista) { %>
+			<% for (Jogos j : lista) { %>
 			
 
 			<tr>
 
 
-				<td><%=n.getId_notificacao()%></td>
-				<td><%=n.getnome_notificacao()%></td>
-				<td><%=n.getMensagem()%></td>
+				<td><%=j.getId_jogos()%></td>
+				<td><%=j.getnome_jogos()%></td>
+				<td><%=j.getPontos()%></td>
 
 				<td><a class="btn btn-success"
-					href="editar-notificacao?id=<%=n.getId_notificacao()%>">Atualizar
-						Notificacoes</a> <a class="btn btn-danger"
-					href="deletar-notificacao?id=<%=n.getId_notificacao()%>">Deletar
-						Notificacoes</a></td>
+					href="editar-jogos?id=<%=j.getId_jogos()%>">Atualizar
+						Jogos</a> <a class="btn btn-danger"
+					href="deletar-jogos?id=<%=j.getId_jogos()%>">Deletar
+						Jogos</a></td>
 						
 			<% }; %>
 				

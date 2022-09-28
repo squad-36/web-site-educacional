@@ -31,15 +31,15 @@ List<Usuario> lista = (List<Usuario>) request.getAttribute("usuario");
 		<li class="nav-item"><a class="nav-link active text-dark fs-4"
 			aria-current="page" href="./index.html">Home</a></li>
 		<li class="nav-item"><a class="nav-link active text-dark fs-4"
-			href="../permissoes/index.jsp">Permissões</a></li>
+			href="./permissao">Permissões</a></li>
 		<li class="nav-item"><a class="nav-link text-dark fs-4"
 			href="./usuario">Usuarios</a></li>
 		<li class="nav-item"><a class="nav-link text-dark fs-4"
-			href="../atividades/index.jsp">Atividades</a></li>
+			href="./atividades">Atividades</a></li>
 		<li class="nav-item"><a class="nav-link text-dark fs-4"
-			href="../jogos/index.jsp">Jogos</a></li>
+			href="./jogos">Jogos</a></li>
 		<li class="nav-item"><a class="nav-link text-dark fs-4"
-			href="../notificacoes/index.jsp">Notificações</a></li>
+			href="./notificacao">Notificações</a></li>
 	</ul>
 
 	<header class="container my-4">

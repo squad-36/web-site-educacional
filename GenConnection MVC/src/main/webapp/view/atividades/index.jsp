@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" import="model.Jogos" import="java.util.List"%>
+	pageEncoding="UTF-8" import="model.Atividades" import="java.util.List"%>
 
 <%
 @SuppressWarnings("unchecked")
-List<Jogos> lista = (List<Jogos>) request.getAttribute("jogos");
+List<Atividades> lista = (List<Atividades>) request.getAttribute("atividades");
 %>
 
 
@@ -11,7 +11,7 @@ List<Jogos> lista = (List<Jogos>) request.getAttribute("jogos");
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Jogos</title>
+<title>Atividades</title>
 
 <link rel="stylesheet" href="./css/style.css">
 
@@ -32,7 +32,7 @@ List<Jogos> lista = (List<Jogos>) request.getAttribute("jogos");
 			<nav class="navbar-nav navbar-dark">
 				<div class="row">
 					<div class="col">
-						<h1 class="navbar-brand title-logo">Jogos</h1>
+						<h1 class="navbar-brand title-logo">Atividades</h1>
 					</div>
 				</div>
 				<div class="row">
@@ -42,7 +42,7 @@ List<Jogos> lista = (List<Jogos>) request.getAttribute("jogos");
 							<li class="list-group-item"><a class="link"
 								href="./index.html">Home</a></li>
 							<li class="list-group-item"><a class="link"
-								href="./permissoes">Permissoes</a></li>
+								href="./permissao">Permissoes</a></li>
 							<li class="list-group-item"><a class="link" href="./usuario">Usuarios</a>
 							</li>
 							<li class="list-group-item"><a class="link"
@@ -50,7 +50,7 @@ List<Jogos> lista = (List<Jogos>) request.getAttribute("jogos");
 							<li class="list-group-item"><a class="link" href="./jogos">Jogos</a>
 							</li>
 							<li class="list-group-item"><a class="link"
-								href="./notificacoes">Notificacoes</a></li>
+								href="./notificacao">Notificacoes</a></li>
 						</ul>
 					</div>
 				</div>
@@ -60,14 +60,14 @@ List<Jogos> lista = (List<Jogos>) request.getAttribute("jogos");
 	<!-- final Menu Nav -->
 
 	<header class="container-fluid bg-danger p-2">
-		<h1 class="h3">Jogos</h1>
+		<h1 class="h3">Atividades</h1>
 	</header>
 
 	<header class="container my-4">
 		<div class="row">
 			<div class="col">
-				<a class="btn btn-info" href="./view/jogos/cadastrar.html">Cadastrar
-					Jogos</a>
+				<a class="btn btn-info" href="./view/atividades/cadastrar.html">Cadastrar
+					Atividades</a>
 
 			</div>
 
@@ -81,9 +81,8 @@ List<Jogos> lista = (List<Jogos>) request.getAttribute("jogos");
 	<table class="table container">
 		<thead class="thead-dark">
 			<tr>
-				<th scope="col">ID do Jogo</th>
-				<th scope="col">Nome do Jogo</th>
-				<th scope="col">Pontos</th>
+				<th scope="col">ID da Atividade</th>
+				<th scope="col">Nome da Matéria</th>
 
 			</tr>
 		</thead>
@@ -91,21 +90,20 @@ List<Jogos> lista = (List<Jogos>) request.getAttribute("jogos");
 
 
 			
-			<% for (Jogos j : lista) { %>
+			<% for (Atividades a : lista) { %>
 			
 
 			<tr>
 
 
-				<td><%=j.getId_jogos()%></td>
-				<td><%=j.getnome_jogos()%></td>
-				<td><%=j.getPontos()%></td>
+				<td><%=a.getId_atividades()%></td>
+				<td><%=a.getMaterias()%></td>
 
 				<td><a class="btn btn-success"
-					href="editar-jogos?id=<%=j.getId_jogos()%>">Atualizar
-						Jogos</a> <a class="btn btn-danger"
-					href="deletar-jogos?id=<%=j.getId_jogos()%>">Deletar
-						Jogos</a></td>
+					href="editar-atividades?id=<%=a.getId_atividades()%>">Atualizar
+						Atividades</a> <a class="btn btn-danger"
+					href="deletar-atividades?id=<%=a.getId_atividades()%>">Deletar
+						Atividades</a></td>
 						
 			<% }; %>
 				
