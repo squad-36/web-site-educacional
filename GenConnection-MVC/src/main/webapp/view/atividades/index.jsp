@@ -3,7 +3,7 @@
 
 <%
 @SuppressWarnings("unchecked")
-List<Atividades> lista = (List<Atividades>) request.getAttribute("Atividades");
+List<Atividades> lista = (List<Atividades>) request.getAttribute("atividades");
 %>
 
 
@@ -12,6 +12,8 @@ List<Atividades> lista = (List<Atividades>) request.getAttribute("Atividades");
 <head>
 <meta charset="UTF-8">
 <title>Atividades</title>
+
+<link rel="stylesheet" href="./css/style.css">
 
 <!-- CDN CSS Bootstrap v-5.1 -->
 <link
@@ -23,46 +25,97 @@ List<Atividades> lista = (List<Atividades>) request.getAttribute("Atividades");
 <body>
 
 
-	<header class="container-fluid bg-primary p-4 text-light">
-		<h1>Atividades</h1>
+
+	<!-- Inicio Menu Nav -->
+	<section class="container-fluid bg-nav-container py-2">
+		<header class="container">
+			<nav class="navbar-nav navbar-dark">
+				<div class="row">
+					<div class="col">
+						<h1 class="navbar-brand title-logo">Atividades</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<ul class="list-group list-group-horizontal  ajust-nav-sm">
+
+							<li class="list-group-item"><a class="link"
+								href="./index.html">Home</a></li>
+							<li class="list-group-item"><a class="link"
+								href="./permissoes">Permissoes</a></li>
+							<li class="list-group-item"><a class="link" href="./usuario">Usuarios</a>
+							</li>
+							<li class="list-group-item"><a class="link"
+								href="./atividades">Atividades</a></li>
+							<li class="list-group-item"><a class="link" href="./jogos">Jogos</a>
+							</li>
+							<li class="list-group-item"><a class="link"
+								href="./notificacoes">Notificacoes</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+	</section>
+	<!-- final Menu Nav -->
+
+	<header class="container-fluid bg-danger p-2">
+		<h1 class="h3">Atividades</h1>
 	</header>
 
-	<!-- Menu -->
-	<ul class="nav justify-content-center">
-		<li class="nav-item"><a class="nav-link active text-dark fs-4"
-			aria-current="page" href="../../index.html">Home</a></li>
-		<li class="nav-item"><a class="nav-link active text-dark fs-4"
-			href="../permissoes/index.jsp">Permissões</a></li>
-		<li class="nav-item"><a class="nav-link text-dark fs-4"
-			href="../usuario/index.jsp">Usuarios</a></li>
-		<li class="nav-item"><a class="nav-link text-dark fs-4"
-			href="../atividades/index.jsp">Atividades</a></li>
-		<li class="nav-item"><a class="nav-link text-dark fs-4"
-			href="../jogos/index.jsp">Jogos</a></li>
-		<li class="nav-item"><a class="nav-link text-dark fs-4"
-			href="../notificacoes/index.jsp">Notificações</a></li>
-	</ul>
+	<header class="container my-4">
+		<div class="row">
+			<div class="col">
+				<a class="btn btn-info" href="./view/atividades/cadastrar.html">Cadastrar
+					Atividades</a>
+
+			</div>
+
+		</div>
+	</header>
+
 
 
 	<!-- Tabelas -->
 
-	<table class="table">
+	<table class="table container">
 		<thead class="thead-dark">
 			<tr>
-				<th scope="col">ID da atividade</th>
-				<th scope="col">Nome da matéria</th>
+				<th scope="col">ID da Atividade</th>
+				<th scope="col">Nome da Matéria</th>
+
 			</tr>
 		</thead>
 		<tbody>
+
+
+			
+			<% for (Atividades a : lista) { %>
+			
+
 			<tr>
-				<td>Id</td>
-				<td>Nome</td>
-				<td><a class="btn btn-info" href="*">Inserir</a></td>
-				<td><a class="btn btn-success" href="*">Atualizar</a></td>
-				<td><a class="btn btn-warning" href="*">Visualizar</a></td>
-				<td><a class="btn btn-danger" href="*">Deletar</a></td>
-			</tr>
-		</tbody>
+
+
+				<td><%=a.getId_atividades()%></td>
+				<td><%=a.getMaterias()%></td>
+
+				<td><a class="btn btn-success"
+					href="editar-atividades?id=<%=a.getId_atividades()%>">Atualizar
+						Atividades</a> <a class="btn btn-danger"
+					href="deletar-atividades?id=<%=a.getId_atividades()%>">Deletar
+						Atividades</a></td>
+						
+			<% }; %>
+				
+		</tr>
+
+
+</tbody>
+
+
+
+			
+		
 	</table>
 
 	<!-- CDN JS Bootstrap v-5.1 -->

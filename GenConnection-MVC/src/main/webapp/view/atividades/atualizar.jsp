@@ -1,8 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Cadastro de Atividade</title>
+<title>Atualizar Atividade</title>
 
 <!-- CDN CSS Bootstrap v-5.1 -->
 <link
@@ -17,29 +21,36 @@
 		<header class="header">
 			<div class="row my-4">
 				<div class="col">
-					<h1>Cadastrar Atividades</h1>
+					<h1>Atualizar Atividades</h1>
 				</div>
 			</div>
-			
+
 		</header>
-		
+
 		<div class="container py-3">
-			<form action="../../cadastrar-atividades">
-				
+			<form action="./atualizar-atividades">
+
 				<div class="form-group mb-3">
-					<label for="nome" class="form-label"> Nome da Matéria </label> <input
-						type="text" id="nome" name="nome" class="form-control" value="" />
+					<label for="id" class="form-label"> Id da Atividade </label> <input
+						type="text" id="id" name="id" class="form-control"
+						value="<%=request.getAttribute("id")%>" />
 				</div>
-				
+
+				<div class="form-group mb-3">
+					<label for="nome" class="form-label"> Novo nome da Matéria </label> <input
+						type="text" id="nome" name="nome" class="form-control"
+						value="<%=request.getAttribute("nome")%>" />
+				</div>
+
 				<button type="submit" class="btn btn-primary">Enviar</button>
-				
-				<a href="../../atividades" class="btn btn-danger"
+
+				<a href="./atividades" class="btn btn-danger"
 					style="margin-left: 10px"> Cancelar </a>
 			</form>
 		</div>
 
 	</main>
-	
+
 	<!-- CDN JS Bootstrap v-5.1 -->
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
