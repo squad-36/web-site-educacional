@@ -31,7 +31,7 @@
 			<form action="./atualizar-jogos">
 
 				<div class="form-group mb-3">
-					<label for="nome" class="form-label"> Id do Jogo </label> <input
+					<label for="id" class="form-label"> Id do Jogo </label> <input
 						type="text" id="id" name="id" class="form-control"
 						value="<%=request.getAttribute("id")%>" />
 				</div>
@@ -45,7 +45,7 @@
 				<div class="form-group mb-3">
 					<label for="pontos" class="form-label"> Novos Pontos </label> <input
 						type="text" id="pontos" name="pontos" class="form-control"
-						value="<%=request.getAttribute("email")%>" />
+						value="<%=request.getAttribute("pontos")%>" />
 				</div>
 
 

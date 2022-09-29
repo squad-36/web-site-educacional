@@ -27,41 +27,36 @@ List<Atividades> lista = (List<Atividades>) request.getAttribute("atividades");
 
 
 	<!-- Inicio Menu Nav -->
-	<section class="container-fluid bg-nav-container py-2">
-		<header class="container">
-			<nav class="navbar-nav navbar-dark">
-				<div class="row">
-					<div class="col">
-						<h1 class="navbar-brand title-logo">Atividades</h1>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<ul class="list-group list-group-horizontal  ajust-nav-sm">
+	<header class="container-fluid bg-primary p-4 text-light">
+		<h1>Atividades</h1>
+	</header>
+	
+	
 
-							<li class="list-group-item"><a class="link"
-								href="./index.html">Home</a></li>
-							<li class="list-group-item"><a class="link"
-								href="./permissao">Permissoes</a></li>
-							<li class="list-group-item"><a class="link" href="./usuario">Usuarios</a>
-							</li>
-							<li class="list-group-item"><a class="link"
-								href="./atividades">Atividades</a></li>
-							<li class="list-group-item"><a class="link" href="./jogos">Jogos</a>
-							</li>
-							<li class="list-group-item"><a class="link"
-								href="./notificacao">Notificacoes</a></li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</header>
-	</section>
+<nav class="navbar navbar-dark bg-dark">
+  <ul class="nav justify-content-center">
+		<li class="nav-item">
+			<a class="nav-link active text-light fs-4" aria-current="page" href="./index.html">Home</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link active text-light fs-4" href="./permissao">Permissões</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link text-light fs-4" href="./usuario">Usuarios</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link text-light fs-4" href="./atividades">Atividades</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link text-light fs-4" href="./jogos">Jogos</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link text-light fs-4" href="./notificacao">Notificações</a>
+		</li>
+	</ul>
+</nav>
 	<!-- final Menu Nav -->
 
-	<header class="container-fluid bg-danger p-2">
-		<h1 class="h3">Atividades</h1>
-	</header>
 
 	<header class="container my-4">
 		<div class="row">
@@ -89,9 +84,11 @@ List<Atividades> lista = (List<Atividades>) request.getAttribute("atividades");
 		<tbody>
 
 
-			
-			<% for (Atividades a : lista) { %>
-			
+
+			<%
+			for (Atividades a : lista) {
+			%>
+
 
 			<tr>
 
@@ -104,18 +101,21 @@ List<Atividades> lista = (List<Atividades>) request.getAttribute("atividades");
 						Atividades</a> <a class="btn btn-danger"
 					href="deletar-atividades?id=<%=a.getId_atividades()%>">Deletar
 						Atividades</a></td>
-						
-			<% }; %>
-				
-		</tr>
+
+				<%
+				}
+				;
+				%>
+
+			</tr>
 
 
-</tbody>
+		</tbody>
 
 
 
-			
-		
+
+
 	</table>
 
 	<!-- CDN JS Bootstrap v-5.1 -->

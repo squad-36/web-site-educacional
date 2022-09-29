@@ -1,0 +1,47 @@
+create database gen_connection;
+
+use gen_connection;
+
+CREATE TABLE usuario (
+id_usuario INTEGER PRIMARY KEY auto_increment,
+email VARCHAR(50),
+senha VARCHAR(50),
+nome VARCHAR(50),
+imagem VARCHAR(100)
+);
+
+CREATE TABLE permissao (
+id_permissao INTEGER PRIMARY KEY auto_increment,
+nome_permissao VARCHAR(50),
+id_usuario INTEGER,
+FOREIGN KEY(id_usuario) REFERENCES Usuario (id_usuario)
+);
+
+CREATE TABLE atividades (
+id_atividades INTEGER PRIMARY KEY auto_increment,
+materias VARCHAR(50),
+id_usuario INTEGER,
+FOREIGN KEY(id_usuario) REFERENCES Usuario (id_usuario)
+);
+
+CREATE TABLE jogos (
+id_jogos INTEGER PRIMARY KEY auto_increment,
+nome_jogos VARCHAR(50),
+pontos INTEGER,
+id_usuario INTEGER,
+FOREIGN KEY(id_usuario) REFERENCES Usuario (id_usuario)
+);
+
+CREATE TABLE notificacao (
+id_notificacao INTEGER PRIMARY KEY auto_increment,
+nome_notificacao VARCHAR(50),
+mensagem VARCHAR(100)
+);
+
+CREATE TABLE item_notificacao (
+data datetime(6),
+id_usuario INTEGER,
+id_notificacao INTEGER PRIMARY KEY AUTO_INCREMENT,
+FOREIGN KEY(id_notificacao) REFERENCES Notificacao (id_notificacao),
+FOREIGN KEY(id_usuario) REFERENCES Usuario (id_usuario)
+);

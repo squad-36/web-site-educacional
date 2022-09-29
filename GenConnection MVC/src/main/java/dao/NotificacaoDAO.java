@@ -16,7 +16,7 @@ public class NotificacaoDAO {
 
 	// Metodo pra salvar
 	public void save(Notificacao notificacao) {
-		String sql = "INSERT INTO Notificacao (nome_notificacao, mensagem) values(?, ?)";
+		String sql = "INSERT INTO notificacao (nome_notificacao, mensagem) values(?, ?)";
 
 		try {
 			// Cria uma conexão com o banco
@@ -29,7 +29,7 @@ public class NotificacaoDAO {
 			
 			pstm.setString(1, notificacao.getnome_notificacao());
 			
-			pstm.setString(3, notificacao.getMensagem());
+			pstm.setString(2, notificacao.getMensagem());
 
 			// Executar a sql para inserção dos dados
 			pstm.execute();
@@ -70,7 +70,7 @@ public class NotificacaoDAO {
 			while (rset.next()) {
 				Notificacao notificacao = new Notificacao();
 
-				notificacao.setnome_notificacao(rset.getString("nome"));
+				notificacao.setnome_notificacao(rset.getString("nome_notificacao"));
 				
 				notificacao.setMensagem(rset.getString("mensagem"));
 				
@@ -137,7 +137,7 @@ public class NotificacaoDAO {
 
 	// Metodo para deletar
 	public void deleteById(int id) {
-		String sql = "DELETE FROM notificacao WHERE id_usuario = ?";
+		String sql = "DELETE FROM notificacao WHERE id_notificacao = ?";
 
 		try {
 			conn = connection.createConnectionMySQL();
@@ -165,7 +165,7 @@ public class NotificacaoDAO {
 	}
 
 	public Notificacao getnotificacaoById(int id) {
-		String sql = "SELECT * FROM notificacao WHERE id_usuario = ?;";
+		String sql = "SELECT * FROM notificacao WHERE id_notificacao = ?;";
 
 		Notificacao notificacao = new Notificacao(id, sql, sql);
 

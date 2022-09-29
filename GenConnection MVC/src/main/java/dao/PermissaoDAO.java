@@ -101,13 +101,13 @@ public class PermissaoDAO {
 	// Metodo pra atualizar
 
 	public void update(Permissao permissao) {
-		String sql = "UPDATE permissao set nome_permissao = ?, id_permissao= ? where id_permissao = ?;";
+		String sql = "UPDATE permissao set nome_permissao = ? where id_permissao = ?;";
 
 		try {
 			conn = connection.createConnectionMySQL();
 
 			pstm = conn.prepareStatement(sql);
-
+			
 			pstm.setString(1, permissao.getnome_permissao());
 			
 			pstm.setInt(2, permissao.getId_permissao());

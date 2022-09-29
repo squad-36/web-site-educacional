@@ -102,7 +102,7 @@ public class AtividadesServlet extends HttpServlet {
 			throws ServletException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
 		atividadesDao.deleteById(id);
-		response.sendRedirect("destino");
+		response.sendRedirect("atividades");
 	}
 
 	// Read by Id

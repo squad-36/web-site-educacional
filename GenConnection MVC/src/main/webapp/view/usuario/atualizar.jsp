@@ -29,6 +29,12 @@
 		
 		<div class="container py-3">
 			<form action="./atualizar-usuario">
+			
+			<div class="form-group mb-3">
+					<label for="id" class="form-label"> ID do Usuario </label> <input
+						type="text" id="id" name="id" class="form-control" 
+						value="<%=request.getAttribute("id") %>" />
+				</div>
 				
 				<div class="form-group mb-3">
 					<label for="nome" class="form-label"> Nome </label> <input
@@ -37,13 +43,13 @@
 				</div>
 				
 				<div class="form-group mb-3">
-					<label for="nome" class="form-label"> Email </label> <input
+					<label for="email" class="form-label"> Email </label> <input
 						type="text" id="email" name="email" class="form-control" 
 						value="<%=request.getAttribute("email") %>" />
 				</div>
 				
 				<div class="form-group mb-3">
-					<label for="nome" class="form-label"> Senha </label> <input
+					<label for="senha" class="form-label"> Senha </label> <input
 						type="text" id="senha" name="senha" class="form-control" 
 						value="<%=request.getAttribute("senha") %>" />
 				</div>

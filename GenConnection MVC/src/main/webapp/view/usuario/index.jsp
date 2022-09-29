@@ -25,22 +25,31 @@ List<Usuario> lista = (List<Usuario>) request.getAttribute("usuario");
 	<header class="container-fluid bg-primary p-4 text-light">
 		<h1>Usuarios</h1>
 	</header>
+	
+	
 
-	<!-- Menu -->
-	<ul class="nav justify-content-center">
-		<li class="nav-item"><a class="nav-link active text-dark fs-4"
-			aria-current="page" href="./index.html">Home</a></li>
-		<li class="nav-item"><a class="nav-link active text-dark fs-4"
-			href="./permissao">Permissões</a></li>
-		<li class="nav-item"><a class="nav-link text-dark fs-4"
-			href="./usuario">Usuarios</a></li>
-		<li class="nav-item"><a class="nav-link text-dark fs-4"
-			href="./atividades">Atividades</a></li>
-		<li class="nav-item"><a class="nav-link text-dark fs-4"
-			href="./jogos">Jogos</a></li>
-		<li class="nav-item"><a class="nav-link text-dark fs-4"
-			href="./notificacao">Notificações</a></li>
+<nav class="navbar navbar-dark bg-dark">
+  <ul class="nav justify-content-center">
+		<li class="nav-item">
+			<a class="nav-link active text-light fs-4" aria-current="page" href="./index.html">Home</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link active text-light fs-4" href="./permissao">Permissões</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link text-light fs-4" href="./usuario">Usuarios</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link text-light fs-4" href="./atividades">Atividades</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link text-light fs-4" href="./jogos">Jogos</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link text-light fs-4" href="./notificacao">Notificações</a>
+		</li>
 	</ul>
+</nav>
 
 	<header class="container my-4">
 		<div class="row">
@@ -80,7 +89,7 @@ List<Usuario> lista = (List<Usuario>) request.getAttribute("usuario");
 				<td><%=a.getNome()%></td>
 				<td><%=a.getEmail()%></td>
 				<td><%=a.getSenha()%></td>
-				<td><%=a.getImagem()%></td>
+				<td><img src ="./assets/images/<%=a.getImagem()%>" width ="70px" height="50px"></img></td>
 
 				<td><a class="btn btn-success"
 					href="editar-usuario?id=<%=a.getId_usuario()%>">Atualizar
