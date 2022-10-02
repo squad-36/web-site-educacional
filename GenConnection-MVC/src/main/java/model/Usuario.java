@@ -8,7 +8,7 @@ public class Usuario {
 	private String email;
 	private String imagem;
 
-//Contrutores
+	// Contrutores
 	public Usuario() {
 	}
 
@@ -20,7 +20,7 @@ public class Usuario {
 		this.setImagem(imagem);
 	}
 
-//Gets e sets
+	// Gets e sets
 	public int getId_usuario() {
 		return id_usuario;
 	}

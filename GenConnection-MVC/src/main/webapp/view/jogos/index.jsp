@@ -1,80 +1,89 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" import="model.Jogos" import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="model.Jogos"
+	import="java.util.List" %>
 
-<%
-@SuppressWarnings("unchecked")
-List<Jogos> lista = (List<Jogos>) request.getAttribute("Jogos");
-%>
-    
-    
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Jogos</title>
+	<% @SuppressWarnings("unchecked") List<Jogos> lista = (List<Jogos>) request.getAttribute("jogos");
+			%>
 
-<!-- CDN CSS Bootstrap v-5.1 -->
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-	crossorigin="anonymous">
-</head>
-<body>
+			<!DOCTYPE html>
+			<html>
 
-	<header class="container-fluid bg-primary p-4 text-light">
-		<h1>Jogos</h1>
-	</header>
+			<head>
+				<meta charset="UTF-8">
+				<title>Jogos</title>
 
-	<!-- Menu -->
-	<ul class="nav justify-content-center">
-		<li class="nav-item">
-			<a class="nav-link active text-dark fs-4" aria-current="page" href="../../index.html">Home</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link active text-dark fs-4" href="../permissoes/index.jsp">Permissões</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link text-dark fs-4" href="../usuario/index.jsp">Usuarios</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link text-dark fs-4" href="../atividades/index.jsp">Atividades</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link text-dark fs-4" href="./index.jsp">Jogos</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link text-dark fs-4" href="../notificacoes/index.jsp">Notificações</a>
-		</li>
-	</ul>
-	
-	<!-- Tabelas -->
-	
-	<table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Tipo</th>
-      <th scope="col">Pontos</th>
-    
-    </tr>
-  </thead>
- <tbody>
-    <tr>
-      <td>Id</td>
-      <td>Tipo</td>
-      <td><a class= "btn btn-info" href="*">inserir</a></td>
-      <td><a class= "btn btn-success" href="*">Atualizar</a></td>
-      <td><a class= "btn btn-warning" href="*">Visualizar</a></td>
-      <td><a class= "btn btn-danger" href="*">Deletar</a></td>
-    </tr>
-  </tbody>
-</table>
+				<!-- CDN CSS Bootstrap v-5.1 -->
+				<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+					integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+					crossorigin="anonymous">
+			</head>
 
-	<!-- CDN JS Bootstrap v-5.1 -->
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-		crossorigin="anonymous"></script>
-</body>
-</html>
+			<body>
+
+				<header class="container-fluid bg-primary p-4 text-light">
+					<h1>Jogos</h1>
+				</header>
+
+				<!-- Menu -->
+				<ul class="nav justify-content-center">
+					<li class="nav-item">
+						<a class="nav-link active text-dark fs-4" aria-current="page" href="../../index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active text-dark fs-4" href="../permissoes/index.jsp">Permissões</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-dark fs-4" href="../usuario/index.jsp">Usuarios</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-dark fs-4" href="../atividades/index.jsp">Atividades</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-dark fs-4" href="./index.jsp">Jogos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-dark fs-4" href="../notificacoes/index.jsp">Notificações</a>
+					</li>
+				</ul>
+
+				<!-- Tabelas -->
+
+				<table class="table">
+					<thead class="thead-dark">
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Tipo</th>
+							<th scope="col">Pontos</th>
+
+						</tr>
+					</thead>
+					<tbody>
+						<% for (Jogos j : lista) { %>
+							<tr>
+
+								<td>
+									<%=j.getId_jogos()%>
+								</td>
+								<td>
+									<%=j.getnome_jogos()%>
+								</td>
+								<td>
+									<%=j.getPontos()%>
+								</td>
+								<td>
+									<a class="btn btn-success"
+										href="editar-notificacao?id=<%=j.getId_jogos()%>">Atualizar Usuario</a>
+									<a class="btn btn-danger" href="deletar-notificacao?id=<%=j.getId_jogos()%>">Deletar
+										Usuario</a>
+								</td>
+
+								<% } %>
+					</tbody>
+				</table>
+
+				<!-- CDN JS Bootstrap v-5.1 -->
+				<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+					integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+					crossorigin="anonymous"></script>
+			</body>
+
+			</html>

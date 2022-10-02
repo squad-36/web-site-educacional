@@ -1,4 +1,5 @@
 package dao;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,6 +14,7 @@ public class AtividadesDAO {
 	Connection conn = null;
 	PreparedStatement pstm = null;
 
+	//Metodo para salvar
 	public void save(Atividades atividades) {
 
 		// Isso é uma sql comum, os ? são os parâmetros que nós vamos adicionar na base
@@ -53,6 +55,7 @@ public class AtividadesDAO {
 		}
 	}
 
+	//Metodo para deletar
 	public void removeById(int id_atividades) {
 
 		String sql = "DELETE FROM Atividades WHERE id_atividades = ?";
@@ -85,6 +88,7 @@ public class AtividadesDAO {
 		}
 	}
 
+	//Metodo para atualizar
 	public void update(Atividades atividades) {
 
 		String sql = "UPDATE Atividades SET materias = ?" + "WHERE id_atividades = ?";
@@ -98,7 +102,6 @@ public class AtividadesDAO {
 
 			// Adiciona o valor do primeiro parâmetro da sql
 			pstm.setString(1, atividades.getMaterias());
-			
 
 			pstm.setInt(2, atividades.getId_atividades());
 
@@ -127,6 +130,7 @@ public class AtividadesDAO {
 
 	}
 
+	//Metodo para ler
 	public List<Atividades> getAtividadesList() {
 
 		String sql = "SELECT * FROM Atividades";
@@ -154,7 +158,6 @@ public class AtividadesDAO {
 				// Recupera o nome do banco e atribui ele ao objeto
 				atividades.setMaterias(rset.getString("Materias"));
 
-
 				// Adiciono o contato recuperado, a lista de contatos
 				atividadesList.add(atividades);
 			}
@@ -178,6 +181,7 @@ public class AtividadesDAO {
 		return atividadesList;
 	}
 
+	// Metodo obter atividade por id
 	public Atividades atividadesById(int id_atividades) {
 		String sql = "SELECT * FROM Atividades WHERE id_atividades = ?";
 
@@ -190,14 +194,12 @@ public class AtividadesDAO {
 			pstm = conn.prepareStatement(sql);
 			pstm.setInt(1, id_atividades);
 			rset = pstm.executeQuery();
-			
+
 			rset.next();
 
 			// Recupera o nome do banco e atribui ele ao objeto
 			atividades.setMaterias(rset.getString("materias"));
 
-			
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

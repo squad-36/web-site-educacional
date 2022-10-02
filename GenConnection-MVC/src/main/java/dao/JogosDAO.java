@@ -16,8 +16,8 @@ public class JogosDAO {
 	PreparedStatement pstm = null;
 
 	// Metodo pra salvar
-	public void save(Jogos Jogos) {
-		String sql = "INSERT INTO Jogos (nome_jogos, pontos) values(?, ?)";
+	public void save(Jogos jogos) {
+		String sql = "INSERT INTO jogos (nome_jogos, pontos) values(?, ?)";
 
 		try {
 			// Cria uma conexão com o banco
@@ -28,9 +28,9 @@ public class JogosDAO {
 
 			// Adicionar o valor do primeiro parametro da sql
 			
-			pstm.setString(1, Jogos.getnome_jogos());
+			pstm.setString(1, jogos.getnome_jogos());
 			
-			pstm.setInt(2, Jogos.getPontos());
+			pstm.setInt(2, jogos.getPontos());
 			
 		
 			// Executar a sql para inserção dos dados
@@ -55,9 +55,9 @@ public class JogosDAO {
 
 	// Metodo para Ler
 	public List<Jogos> getJogos() {
-		String sql = "select * from Jogos;";
+		String sql = "select * from jogos;";
 
-		List<Jogos> Jogos = new ArrayList<Jogos>();
+		List<Jogos> jogos = new ArrayList<Jogos>();
 
 		// Classe que vai recuperar os dados do banco de dados
 		ResultSet rset = null;
@@ -70,11 +70,11 @@ public class JogosDAO {
 			rset = pstm.executeQuery();
 
 			while (rset.next()) {
-				Jogos jogos = new Jogos();
-				jogos.setId_jogos(rset.getInt("id_Jogos"));
-				jogos.setnome_jogos(rset.getString("nome_jogos"));
-				jogos.setPontos(rset.getInt("pontos"));
-				Jogos.add(jogos);
+				Jogos lerJogos = new Jogos();
+				lerJogos.setId_jogos(rset.getInt("id_Jogos"));
+				lerJogos.setnome_jogos(rset.getString("nome_jogos"));
+				lerJogos.setPontos(rset.getInt("pontos"));
+				jogos.add(lerJogos);
 
 			}
 
@@ -97,12 +97,12 @@ public class JogosDAO {
 			}
 		}
 
-		return Jogos;
+		return jogos;
 	}
-	// Metodo pra atualizar
 
+	// Metodo pra atualizar
 	public void update(Jogos jogos) {
-		String sql = "UPDATE Jogos set nome_jogos = ?, pontos = ? where id_jogos = ?;";
+		String sql = "UPDATE jogos set nome_jogos = ?, pontos = ? where id_jogos = ?;";
 
 		try {
 			conn = connection.createConnectionMySQL();
@@ -130,7 +130,7 @@ public class JogosDAO {
 
 	// Metodo para deletar
 	public void deleteById(int id) {
-		String sql = "DELETE FROM Jogos WHERE id_jogos = ?";
+		String sql = "DELETE FROM jogos WHERE id_jogos = ?";
 
 		try {
 			conn = connection.createConnectionMySQL();
@@ -157,8 +157,9 @@ public class JogosDAO {
 		}
 	}
 
+	//Metodo obter jogos por id
 	public Jogos getJogosById(int id) {
-		String sql = "SELECT * FROM Jogos WHERE id_jogos = ?;";
+		String sql = "SELECT * FROM jogos WHERE id_jogos = ?;";
 
 		Jogos jogos = new Jogos();
 
@@ -181,8 +182,6 @@ public class JogosDAO {
 			
 			jogos.setPontos(rset.getInt("pontos"));
 			
-		
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

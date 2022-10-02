@@ -4,8 +4,8 @@ public class Permissao {
 
 	private int id_permissao;
 	private String nome_permissao;
-	
-	//Construtores
+
+	// Construtores
 	public Permissao() {
 	}
 
@@ -13,9 +13,8 @@ public class Permissao {
 		this.id_permissao = id_permissao;
 		this.nome_permissao = nome_permissao;
 	}
-	
-	
-	//Gets e Sets
+
+	// Gets e Sets
 	public int getId_permissao() {
 		return id_permissao;
 	}

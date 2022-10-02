@@ -108,8 +108,8 @@ public class UsuarioDAO {
 
 		return Usuario;
 	}
-	// Metodo pra atualizar
 
+	// Metodo pra atualizar
 	public void update(Usuario usuario) {
 		String sql = "UPDATE Usuario set nome = ?, email = ?, senha= ?, imagem = ? where id_usuario = ?;";
 
@@ -175,6 +175,7 @@ public class UsuarioDAO {
 		}
 	}
 
+	//Metodo obter usuario por id
 	public Usuario getusuarioById(int id) {
 		String sql = "SELECT * FROM Usuario WHERE id_usuario = ?;";
 

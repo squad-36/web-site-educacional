@@ -16,7 +16,7 @@ public class PermissaoDAO {
 
 	// Metodo pra salvar
 	public void save(Permissao permissao) {
-		String sql = "INSERT INTO Permissao (nome_permissao) values(?)";
+		String sql = "INSERT INTO permissao (nome_permissao) values(?)";
 
 		try {
 			// Cria uma conexão com o banco
@@ -51,7 +51,7 @@ public class PermissaoDAO {
 
 	// Metodo para Ler
 	public List<Permissao> getPermissao() {
-		String sql = "select * from Permissao;";
+		String sql = "select * from permissao;";
 
 		List<Permissao> Permissao = new ArrayList<Permissao>();
 
@@ -98,10 +98,10 @@ public class PermissaoDAO {
 
 		return Permissao;
 	}
-	// Metodo pra atualizar
 
+	// Metodo pra atualizar
 	public void update(Permissao permissao) {
-		String sql = "UPDATE Permissao set nome_permissao = ?, id_permissao= ?  where id_permissao = ?;";
+		String sql = "UPDATE permissao set nome_permissao = ?, id_permissao= ?  where id_permissao = ?;";
 
 		try {
 			conn = connection.createConnectionMySQL();
@@ -133,7 +133,7 @@ public class PermissaoDAO {
 
 	// Metodo para deletar
 	public void deleteById(int id) {
-		String sql = "DELETE FROM Permissao WHERE id_permissao = ?";
+		String sql = "DELETE FROM permissao WHERE id_permissao = ?";
 
 		try {
 			conn = connection.createConnectionMySQL();
@@ -160,8 +160,9 @@ public class PermissaoDAO {
 		}
 	}
 
+	//Metodo obter permissao por id
 	public Permissao getpermissaoById(int id) {
-		String sql = "SELECT * FROM Permissao WHERE id_permissao = ?;";
+		String sql = "SELECT * FROM permissao WHERE id_permissao = ?;";
 
 		Permissao permissao = new Permissao();
 

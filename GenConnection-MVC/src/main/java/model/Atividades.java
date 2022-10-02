@@ -5,7 +5,7 @@ public class Atividades {
 	private int id_atividades;
 	private String materias;
 
-// Construtores
+	// Construtores
 	public Atividades() {
 	}
 
@@ -14,7 +14,7 @@ public class Atividades {
 		this.materias = materias;
 	}
 
-//Gets e Sets
+	// Gets e Sets
 	public int getId_atividades() {
 		return id_atividades;
 	}

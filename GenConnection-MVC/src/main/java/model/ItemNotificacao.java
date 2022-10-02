@@ -5,8 +5,8 @@ public class ItemNotificacao {
 	private int id_usuario;
 	private int id_notificacao;
 	private String data;
-	
-	//Construtores
+
+	// Construtores
 	public ItemNotificacao() {
 	}
 
@@ -16,7 +16,7 @@ public class ItemNotificacao {
 		this.data = data;
 	}
 
-	//Gets e Sets
+	// Gets e Sets
 	public int getId_usuario() {
 		return id_usuario;
 	}

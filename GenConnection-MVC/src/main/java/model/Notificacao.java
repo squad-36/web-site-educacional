@@ -5,8 +5,8 @@ public class Notificacao {
 	private int id_notificacao;
 	private String nome_notificacao;
 	private String mensagem;
-	
-//Construtores
+
+	// Construtores
 	public Notificacao() {
 	}
 
@@ -15,8 +15,8 @@ public class Notificacao {
 		this.nome_notificacao = nome_notificacao;
 		this.mensagem = mensagem;
 	}
-	
-//Gets e Sets
+
+	// Gets e Sets
 	public int getId_notificacao() {
 		return id_notificacao;
 	}

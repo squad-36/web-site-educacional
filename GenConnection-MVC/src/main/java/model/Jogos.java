@@ -6,7 +6,7 @@ public class Jogos {
 	private String nome_jogos;
 	private int pontos;
 
-//Construtores
+	// Construtores
 	public Jogos() {
 	}
 
@@ -17,7 +17,7 @@ public class Jogos {
 		this.pontos = pontos;
 	}
 
-//Gets e Sets
+	// Gets e Sets
 	public int getId_jogos() {
 		return id_jogos;
 	}

@@ -16,7 +16,8 @@ import model.Atividades;
 /**
  * Servlet implementation class UsuarioServlet
  */
-@WebServlet(urlPatterns = { "/usuario", "/cadastrar-usuario", "/editar-usuario", "/atualizar-usuario", "/deletar-usuario" })
+@WebServlet(urlPatterns = { "/usuario", "/cadastrar-usuario", "/editar-usuario", "/atualizar-usuario",
+		"/deletar-usuario" })
 public class AtividadesServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -38,55 +39,53 @@ public class AtividadesServlet extends HttpServlet {
 		String action = request.getServletPath();
 
 		switch (action) {
-		case "/atividades":
-			read(request, response);
-			break;
-			
-		case "/cadastrar-atividades":
-			create(request, response);
-			break;
+			case "/atividades":
+				read(request, response);
+				break;
 
-		default:
-			response.sendRedirect("index.html");
-			break;
+			case "/cadastrar-atividades":
+				create(request, response);
+				break;
+
+			default:
+				response.sendRedirect("index.html");
+				break;
 		}
 
 	}
 
-	
 	// Create
-		protected void create(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			
-			atividades.setMaterias(request.getParameter("materias"));
-			
-		
-		}
-		
-		// Read
-		protected void read(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			List<Atividades> lista = atividadesDao.getAtividadesList();
+	protected void create(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
-			request.setAttribute("atividades", lista);
+		atividades.setMaterias(request.getParameter("materias"));
+	}
 
-			RequestDispatcher rd = request.getRequestDispatcher("./view/atividades/");
-			rd.forward(request, response);
-			
-		}
-		
-		
-		// Update
-		protected void update(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { 
-			
-			atividades.setMaterias(request.getParameter("materias"));
-			atividades.setId_atividades(Integer.parseInt(request.getParameter("id_atividades")));
-		}
-		
-		// Delete
-		protected void delete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			int id_atividades = Integer.parseInt(request.getParameter("id_atividades"));
-			atividadesDao.removeById(id_atividades);
-			response.sendRedirect("atividades");
-		}
-		
+	// Read
+	protected void read(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		List<Atividades> lista = atividadesDao.getAtividadesList();
+
+		request.setAttribute("atividades", lista);
+
+		RequestDispatcher rd = request.getRequestDispatcher("./view/atividades/");
+		rd.forward(request, response);
+
+	}
+
+	// Update
+	protected void update(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		atividades.setMaterias(request.getParameter("materias"));
+		atividades.setId_atividades(Integer.parseInt(request.getParameter("id_atividades")));
+	}
+
+	// Delete
+	protected void delete(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		int id_atividades = Integer.parseInt(request.getParameter("id_atividades"));
+		atividadesDao.removeById(id_atividades);
+		response.sendRedirect("atividades");
+	}
 
 }

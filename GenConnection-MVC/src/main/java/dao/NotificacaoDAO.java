@@ -26,9 +26,9 @@ public class NotificacaoDAO {
 			pstm = conn.prepareStatement(sql);
 
 			// Adicionar o valor do primeiro parametro da sql
-			
+
 			pstm.setString(1, notificacao.getnome_notificacao());
-			
+
 			pstm.setString(3, notificacao.getMensagem());
 
 			// Executar a sql para inserção dos dados
@@ -68,12 +68,12 @@ public class NotificacaoDAO {
 			rset = pstm.executeQuery();
 
 			while (rset.next()) {
-				Notificacao notificacao = new Notificacao(0, sql,sql);
+				Notificacao notificacao = new Notificacao(0, sql, sql);
 
 				notificacao.setnome_notificacao(rset.getString("nome"));
-				
+
 				notificacao.setMensagem(rset.getString("mensagem"));
-				
+
 				notificacao.setId_notificacao(rset.getInt("id_notificacao"));
 
 				Notificacao.add(notificacao);
@@ -101,8 +101,8 @@ public class NotificacaoDAO {
 
 		return Notificacao;
 	}
-	// Metodo pra atualizar
 
+	// Metodo pra atualizar
 	public void update(Notificacao notificacao) {
 		String sql = "UPDATE Notificacao set nome_notificacao = ?, mensagem = ?, where id_notificacao = ?;";
 
@@ -112,9 +112,9 @@ public class NotificacaoDAO {
 			pstm = conn.prepareStatement(sql);
 
 			pstm.setString(1, notificacao.getnome_notificacao());
-			
+
 			pstm.setString(2, notificacao.getMensagem());
-	
+
 			pstm.setInt(3, notificacao.getId_notificacao());
 
 			pstm.execute();
@@ -164,6 +164,7 @@ public class NotificacaoDAO {
 		}
 	}
 
+	//Metodo obter notificacao por id
 	public Notificacao getnotificacaoById(int id) {
 		String sql = "SELECT * FROM Notificacao WHERE id_usuario = ?;";
 
@@ -185,7 +186,7 @@ public class NotificacaoDAO {
 			notificacao.setId_notificacao(rset.getInt("id_notificacao"));
 
 			notificacao.setnome_notificacao(rset.getString("nome_notificacao"));
-			
+
 			notificacao.setMensagem(rset.getString("mensagem"));
 
 		} catch (Exception e) {
