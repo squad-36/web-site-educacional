@@ -5,26 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gen Conection</title>
+
     <!-- Link Css externo global -->
     <link rel="stylesheet" href="../../Css/styleGlobal.css">
 
-    <!-- Link css pg_alunos -->
-    <link rel="stylesheet" href="../../Css/pg_aluno.css">
+    <link rel="stylesheet" href="../../Css/painelPais.css">
 
     <!--Link CDN Biblioteca Remix icon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <!-- CSS Bootstrap CDN v-5.2 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
-<style>
-   
-</style>
 
 <body>
-
     <section>
 
         <!-- Inicio Menu Nav -->
@@ -43,28 +38,21 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                         <ul class="navbar-nav fw-bolder">
                             <li class="nav-item">
-                                <a class="nav-link text-light" aria-current="page" href="./index.html">
+                                <a class="nav-link text-light" aria-current="page" href="#">
                                     <i class="ri-rocket-line border p-2 rounded-circle"></i>
-                                    Inicio
+                                    Area principal
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="alunoOpcao.html">
-                                    <i class="ri-hand-heart-line border p-2 rounded-circle"></i>
-                                    Atividades Premiações
-                                </a>
-                            </li>
-                           
+
                             <li class="nav-item dropdown">
                                 <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdownMenuLink"
                                     role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="ri-file-history-line border p-2 rounded-circle"></i>
-                                    Gerenciador de tarefas
+                                    Preferencias
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item text-primary" href="#">Aula Pendente</a></li>
-                                    
-                                    <li><a class="dropdown-item text-primary" href="../Entrar/index.html">Sair</a></li>
+                                                               
+                                    <li><a class="dropdown-item text-primary" href="../Entrar/entrar.html">Sair</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -75,16 +63,12 @@
         </header>
         <!-- Fim Menu Nav -->
 
-        <!-- Inicio cards main alunos -->
-        <main class="container-fluid bg-aluno">
+        <!-- Inicio cards main pais -->
+        <main class="container-fluid bg-main-prof">
             <header class="container py-2">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="row justify-content-center">
-                            <p class="fs-6 fw-bold"></p>
-                            <h2>MINHAS ATIVIDADES</h2>
-                            </p>
-                        </div>
+                    <div class="col-6">
+                        <p class="ola fw-bold ">Olá, pais! seja bem vindo(a).</p>
                     </div>
                     <div class="col-6 text-end">
                         <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
@@ -99,69 +83,96 @@
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                                     <li><a class="dropdown-item" href="#">Professores</a></li>
-                                    <li><a class="dropdown-item" href="#">Secretaria</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="../../Images/imgPainelAlunos/emoji.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Minhas Emoções</h5>
-                                <p class="card-text">Acompanhe aqui o seu histórico de emoções através dos seus emojis.
-                                </p>
+                <!-------Parte Caio------------------------------------------------->
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex position-relative">
+                                <div class="imagem">
+                                    <img src="../../Images/imgProfessor/user.png" class="flex-shrink-0 me-3" alt="...">
+                                </div>
+                                <div>
+                                </div>
+                                <h5 class="mt-0"></h5>
+                                <div class="">
+                                    <ul class="navbar-nav text-start">
+                                        <li class="nav-item">Nome do aluno:</li>
+                                        <li class="nav-item">Escola:</li>
+                                        <li class="nav-item">Professor:</li>
+                                        <li class="nav-item">Serie:</li>
+                                        <li class="nav-item">Ano:</li>
+                                        
+                                    </ul>
+                                </div>
                             </div>
-                            <button class="btn btn-primary" type="button">Clique Aqui!</button>
-                            <div class="card-footer">
-                                <small class="text-muted">Última atualização feita há três minutos.</small>
+                        </div>
+                    </div> <br><br>
+                    <div class="container mb-2">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <div class="at">
+                                            <h5 class="card-title">Atividades</h5>
+                                            <p class="card-text text-start">Some quick example text to build on the card title and
+                                                make
+                                                up the bulk of the card's content.</p>
+                                            <div class="pais2">
+                                                <a href="#" class="btn btn-primary">Clique Aqui</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <div class="at">
+                                            <h5 class="card-title">Boletim</h5>
+                                            <p class="card-text text-start">Some quick example text to build on the card title and
+                                                make
+                                                up the bulk of the card's content.</p>
+                                            <div class="pais2">
+                                                <a href="#" class="btn btn-primary">Clique Aqui</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <div class="at">
+                                            <h5 class="card-title">Presença</h5>
+                                            <p class="card-text text-start">Some quick example text to build on the card title and
+                                                make
+                                                up the bulk of the card's content.</p>
+                                            <div class="pais2">
+                                                <a href="#" class="btn btn-primary">Clique Aqui</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="../../Images/imgPainelAlunos/estudo-note.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Minhas Atividades EAD</h5>
-                                <p class="card-text">Acompanhe como está o andamento das suas atividades na plataforma.
-                                </p>
-                            </div>
-                            <button class="btn btn-primary" type="button">Clique Aqui!</button>
-                            <div class="card-footer">
-                                <small class="text-muted">Última atualização feita há três minutos</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="../../Images/imgPainelAlunos/recompensa.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Minhas Recompensas</h5>
-                                <p class="card-text">Veja as suas recompensas adquiridas e as que você está prestes a
-                                    conquistar.</p>
-                            </div>
-                            <button class="btn btn-primary" type="button">Clique Aqui!</button>
-                            <div class="card-footer">
-                                <small class="text-muted">Última atualização feita há três minutos</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <!-------------------------------Fim Parte Caio--------------------------------->
 
             </header>
 
         </main>
-        <!-- Fim cards main alunos -->
+        <!-- Fim cards main pais -->
 
         <!--Inicio footer-->
         <footer class="container-fluid bg-footer">
             <div class="container py-4 text-light">
 
-                <div class="row p-2">
+                <div class="row py-2">
                     <div class="col">
                         <form class="d-flex" role="search">
                             <input class="form-control me-2" type="search" placeholder="Biblioteca Online"
@@ -172,7 +183,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col">
+                    <div class="col text-start">
                         <a href="#" class="nav-link">
                             <h5>Inclusão tecnológica</h5>
                         </a>
@@ -186,7 +197,7 @@
                             <h5>Receba novidades</h5>
                         </a>
                     </div>
-                    <div class="col">
+                    <div class="col text-start">
                         <a href="#" class="nav-link">
                             <h5>Preciso de ajuda!</h5>
                         </a>
@@ -217,37 +228,6 @@
         </footer>
         <!--Fim footer-->
     </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <!-- JS Bootstrap CDN v-5.2 -->
