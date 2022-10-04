@@ -89,7 +89,6 @@ public class UsuarioServlet extends HttpServlet {
 			
 		}
 		
-		
 		// Update
 		protected void update(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { 
 			
