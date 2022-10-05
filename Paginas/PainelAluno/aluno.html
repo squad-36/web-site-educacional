@@ -158,7 +158,7 @@
                             <div class="col-3 text-center pt-4">
                                 <table class="table table-hover text-light">
                                     <thead>
-                                        <tr >
+                                        <tr>
                                             <th scope="col">Rancking</th>
                                             <th scope="col">Nome</th>
                                         </tr>
@@ -259,8 +259,8 @@
                 <h4> Bem vindo aluno!!</h4>
             </div>
             <div class="col-2 display-none my-1">
-                 <!-- Button trigger modal -->
-                 <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <i class="ri-flashlight-line"></i>
                 </button>
 
@@ -268,35 +268,30 @@
         </div>
     </header>
 
-
     <!--------------------------------acordiao---------------------------------------------->
     <aside class="container-fluid bg-aluno pb-4">
         <div class="row">
             <div class="col-3 Rancking">
-                <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingOne">
-                            <button style="background-color:#EC4D36;"
-                                class="bg-collapse accordion-button collapsed text-light" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                aria-controls="flush-collapseOne">
-                                <img src="../../Images/imgPainelAlunos/botaomural.png" class="p-1"> Mural
+                        <h2 class="accordion-header" id="headingOne">
+                            <button style="background-color:#EC4D36;" class="accordion-button text-light" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                Mural
                             </button>
                         </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div id="collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-
-
-                                <div class="selecionar text-light  ">
+                                <div class="selecionar text-light">
                                     <a class="dropdown-item  " href="#">
                                         <option selected>Minha Bliblioteca</option>
                                     </a>
-
+            
                                     <a class="dropdown-item " href="#">
                                         <option value="1">Minhas Materias</option>
                                     </a>
-
+            
                                     <a class="dropdown-item " href="#">
                                         <option value="3">Calendário</option>
                                     </a>
@@ -304,29 +299,25 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingtwo">
-                            <button style="background-color:#EC4D36;" class="accordion-button collapsed text-light "
-                                type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsetwo"
-                                aria-expanded="false" aria-controls="flush-collapsetwo">
-                                <img src="../../Images/imgPainelAlunos/aluno.png" class="p-1"> Central do aluno
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button style="background-color:#EC4D36;" class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Central do aluno
                             </button>
                         </h2>
-                        <div id="flush-collapsetwo" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingtwo" data-bs-parent="#accordionFlushExample">
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-
-
                                 <div class="selecionar text-light  ">
                                     <a class="dropdown-item  " href="#">
                                         <option selected>Cursos</option>
                                     </a>
-
+            
                                     <a class="dropdown-item " href="#">
                                         <option value="2">Boletim</option>
                                     </a>
-
+            
                                     <a class="dropdown-item " href="./atividades.html" target="_blank">
                                         <option value="3">Atividades</option>
                                     </a>
@@ -334,61 +325,52 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingthree">
-                            <button style="background-color:#EC4D36;" class="accordion-button collapsed text-light "
-                                type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsethree"
-                                aria-expanded="false" aria-controls="flush-collapsethree">
-                                <img src="../../Images/imgPainelAlunos/jogos.png" class="p-1"> Jogos
+                        <h2 class="accordion-header" id="headingThree">
+                            <button style="background-color:#EC4D36;" class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false"
+                                aria-controls="collapseThree">
+                                Jogos
                             </button>
                         </h2>
-                        <div id="flush-collapsethree" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingthree" data-bs-parent="#accordionFlushExample">
+                        <div id="collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-
                                 <div class="selecionar text-light  ">
                                     <a class="dropdown-item  " href="#">
                                         <option selected>Nivel</option>
                                     </a>
-
                                     <a class="dropdown-item " href="#">
                                         <option value="1">Pontos</option>
                                     </a>
-
                                     <a class="dropdown-item " href="./jogos.html" target="_blank">
                                         <option value="2">Jogos disponiveis</option>
                                     </a>
-
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="accordion-item ">
-                        <h2 class="accordion-header" id="flush-headingfour">
-                            <button style="background-color:#EC4D36;" class="accordion-button collapsed text-light "
-                                type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefour"
-                                aria-expanded="false" aria-controls="flush-collapsefour">
-                                <img src="../../Images/imgPainelAlunos/botaomural.png" class="p-1"> Projetos
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button style="background-color:#EC4D36;" class="accordion-button collapsed text-light" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false"
+                                aria-controls="collapseFour">
+                                Projetos
                             </button>
                         </h2>
-                        <div id="flush-collapsefour" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingfour" data-bs-parent="#accordionFlushExample">
+                        <div id="collapseFour" class="accordion-collapse collapse"
+                            aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-
                                 <div class="selecionar text-light  ">
                                     <a class="dropdown-item  " href="#">
                                         <option selected>Projeto em andamento</option>
                                     </a>
-
                                     <a class="dropdown-item " href="#">
                                         <option value="1">Projeto disponiveis</option>
                                     </a>
                                     <a class="dropdown-item " href="#">
                                         <option value="1">Guia de carrreira</option>
                                     </a>
-
                                 </div>
                             </div>
                         </div>
@@ -512,7 +494,7 @@
 
     <!--Inicio footer-->
     <footer class="container-fluid bg-footer">
-        
+
         <div class="container py-4 text-light">
 
             <div class="row py-2">
@@ -574,8 +556,10 @@
     <script src="./aluno.js"></script>
     <!-- JS Bootstrap CDN v-5.2 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous">
+    </script>
+
 </body>
 
 </html>

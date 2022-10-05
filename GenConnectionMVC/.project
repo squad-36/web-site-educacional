@@ -28,6 +28,7 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
+<<<<<<< HEAD
 	<filteredResources>
 		<filter>
 <<<<<<< HEAD:GenConnection-MVC/.project
@@ -43,4 +44,6 @@
 			</matcher>
 		</filter>
 	</filteredResources>
+=======
+>>>>>>> main
 </projectDescription>
