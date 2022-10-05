@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Atualizar Permissoes</title>
+<title>Atualizar Jogos</title>
 
 <!-- CDN CSS Bootstrap v-5.1 -->
 <link
@@ -21,31 +21,37 @@
 		<header class="header">
 			<div class="row my-4">
 				<div class="col">
-					<h1>Atualizar Permissoes</h1>
+					<h1>Atualizar Jogos</h1>
 				</div>
 			</div>
 
 		</header>
 
 		<div class="container py-3">
-			<form action="./atualizar-permissao">
+			<form action="./atualizar-jogos">
 
 				<div class="form-group mb-3">
-					<label for="id" class="form-label"> Id da Permissao </label> <input
-						type="text" id="id" name="id" class="form-control"
+					<label for="id" class="form-label"> </label> <input
+						type="hidden" id="id" name="id" class="form-control"
 						value="<%=request.getAttribute("id")%>" />
 				</div>
 
 				<div class="form-group mb-3">
-					<label for="nome" class="form-label"> Novo nome da Permissao</label> <input
+					<label for="nome" class="form-label"> Novo nome Jogo </label> <input
 						type="text" id="nome" name="nome" class="form-control"
 						value="<%=request.getAttribute("nome")%>" />
+				</div>
+
+				<div class="form-group mb-3">
+					<label for="pontos" class="form-label"> Novos Pontos </label> <input
+						type="text" id="pontos" name="pontos" class="form-control"
+						value="<%=request.getAttribute("pontos")%>" />
 				</div>
 
 
 				<button type="submit" class="btn btn-primary">Enviar</button>
 
-				<a href="./permissao" class="btn btn-danger"
+				<a href="./jogos" class="btn btn-danger"
 					style="margin-left: 10px"> Cancelar </a>
 			</form>
 		</div>
