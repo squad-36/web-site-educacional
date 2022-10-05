@@ -31,8 +31,8 @@
 			<form action="./atualizar-usuario">
 			
 			<div class="form-group mb-3">
-					<label for="id" class="form-label"> ID do Usuario </label> <input
-						type="text" id="id" name="id" class="form-control" 
+					<label for="id" class="form-label"> </label> <input
+						type="hidden" id="id" name="id" class="form-control" 
 						value="<%=request.getAttribute("id") %>" />
 				</div>
 				
